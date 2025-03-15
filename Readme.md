@@ -54,14 +54,3 @@ If Yahoo Finance fails too frequently, consider switching to:
 
 👉 **Modify `get_stock_price()` to use an alternative API** for more reliable data.  
 
-
-Example:  
-#### **Task in `todo.txt`:**
-#### **LLM Analysis Output:**
-```yaml
-Function: remind_me
-Variables:
-- subject = "Report Submission Reminder"
-- body = "Don't forget to submit the report by Sunday."
-- to_email = "user@example.com"
-
