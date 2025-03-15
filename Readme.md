@@ -36,17 +36,7 @@ When a task is found in `todo.txt`, the **LLM analyzes it** and determines:
 - Which Python function should execute it  
 - What parameters should be passed  
 
-Example:  
-#### **Task in `todo.txt`:**
-#### **LLM Analysis Output:**
-```yaml
-Function: remind_me
-Variables:
-- subject = "Report Submission Reminder"
-- body = "Don't forget to submit the report by Sunday."
-- to_email = "user@example.com"
-
-⚠️ LLM-Specific Challenges & Best Practices
+⚠️ **LLM-Specific Challenges & Best Practices:** 
 1️⃣ Gemini-2 Flash Struggles with Generic & Verbose Prompts
 ✅ If prompts are too generic, function and variable extraction fails.
 ✅ If prompts are too verbose, Gemini messes up variable extraction by trying to explain its choices.
@@ -63,4 +53,15 @@ If Yahoo Finance fails too frequently, consider switching to:
 3. **Polygon.io** – [https://polygon.io/](https://polygon.io/) (Good for historical data)  
 
 👉 **Modify `get_stock_price()` to use an alternative API** for more reliable data.  
+
+
+Example:  
+#### **Task in `todo.txt`:**
+#### **LLM Analysis Output:**
+```yaml
+Function: remind_me
+Variables:
+- subject = "Report Submission Reminder"
+- body = "Don't forget to submit the report by Sunday."
+- to_email = "user@example.com"
 
