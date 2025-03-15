@@ -1,0 +1,13 @@
+yfinance
+schedule
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+icalendar
+google-generativeai
+python-dotenv
+google-cloud-aiplatform>=1.38.0
+google-cloud-secret-manager>=2.0.0
+absl-py>=1.0.0
+convertapi
