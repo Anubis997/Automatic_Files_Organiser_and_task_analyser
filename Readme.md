@@ -2,8 +2,6 @@
 
 This Python script **automates file organization**, **compresses files**, and **executes tasks** found in a `todo.txt` file. It leverages **Large Language Models (LLMs)** to analyze tasks and execute them dynamically.  
 
----
-
 ## ✨ Features  
 
 ### 📌 Folder Organization  
@@ -29,10 +27,7 @@ Reads a file named `todo.txt` in the given directory and performs the following 
 - **📈 Stock Price Updates**  
 → Schedules a daily email with NVIDIA stock price.
 
----
-
 ## 🧠 How LLMs are Used in This Project  
-
 This project **integrates Large Language Models (LLMs) from Gemini AI** to **interpret and automate** tasks.  
 
 ### 🔍 **1️⃣ Task Analysis via LLM**  
@@ -51,4 +46,21 @@ Variables:
 - body = "Don't forget to submit the report by Sunday."
 - to_email = "user@example.com"
 
+⚠️ LLM-Specific Challenges & Best Practices
+1️⃣ Gemini-2 Flash Struggles with Generic & Verbose Prompts
+✅ If prompts are too generic, function and variable extraction fails.
+✅ If prompts are too verbose, Gemini messes up variable extraction by trying to explain its choices.
+✅ Best practice → Keep prompts concise and goal-focused.
+
+### 🚨 **Yahoo Finance API is Unreliable**
+- The Yahoo Finance API **often rate-limits requests**, making stock price retrieval inconsistent.  
+- It **sometimes fails without warning** and **returns incomplete or outdated data**.  
+
+✅ **Recommended Alternatives:**  
+If Yahoo Finance fails too frequently, consider switching to:  
+1. **Alpha Vantage** – [https://www.alphavantage.co/](https://www.alphavantage.co/) (Free tier available)  
+2. **IEX Cloud** – [https://iexcloud.io/](https://iexcloud.io/) (Real-time pricing)  
+3. **Polygon.io** – [https://polygon.io/](https://polygon.io/) (Good for historical data)  
+
+👉 **Modify `get_stock_price()` to use an alternative API** for more reliable data.  
 
